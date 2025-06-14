@@ -67,3 +67,45 @@ button:hover {
     margin-bottom: 15px;
     font-size: 1.1em;
 }
+
+/* Add media query for mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="date"], button {
+        padding: 10px; /* Larger touch targets */
+        font-size: 16px; /* Easier to read */
+        width: calc(100% - 22px); /* Full width minus padding and border */
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .weeks-grid {
+        /* Adjust grid to fit smaller screens */
+        grid-template-columns: repeat(auto-fill, minmax(5px, 1fr)); /* Make squares smaller and responsive */
+        gap: 1px; /* Reduce gap for smaller squares */
+        /* Recalculate width based on new square size and gap or let it be flexible */
+        width: 100%; /* Allow grid to take full width */
+        padding: 0 5px; /* Add some padding on the sides of the grid */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .week-square {
+        width: 5px; /* Smaller squares */
+        height: 5px; /* Smaller squares */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
